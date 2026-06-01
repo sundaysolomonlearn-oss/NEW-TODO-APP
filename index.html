@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="try.js"></script>
+</head>
+    <style>
+        body{
+    background-color:#EEEEEE;
+}
+.todolist{
+    background-color:#FFF;
+    padding:20px 20px 10px 20px;
+    margin-top:30px;
+}
+.todolist h1{
+    margin:0;
+    padding-bottom:20px;
+    text-align:center;
+}
+.form-control{
+    border-radius:0;
+}
+li.ui-state-default{
+    background:#fff;
+    border:none;
+    border-bottom:1px solid #ddd;
+}
+
+li.ui-state-default:last-child{
+    border-bottom:none;
+}
+
+.todo-footer{
+    background-color:#F4FCE8;
+    margin:0 -20px -10px -20px;
+    padding: 10px 20px;
+}
+.todolist-footer{
+    background-color:#F4FCE8;
+    margin:0 -20px -10px -20px;
+    padding: 10px 20px;
+}
+#done-items li{
+    padding:10px 0;
+    border-bottom:1px solid #ddd;
+    text-decoration:line-through;
+}
+#done-items li:last-child{
+    border-bottom:none;
+}
+#checkAll{
+    margin-top:10px;
+}
+
+</style>
+<body>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-6" >
+
+                <div class="todolist not-done" style="height: 100%">
+                    <h1>TODO APP</h1>
+
+                    <div class="input-group col-md-6" style="padding-left:9px">
+                        <div class="btn-group">
+                              <div class="form-group has-feedback has-clear">
+                                 <h3> <input type = "text" class="form-control btn-lg" value="" style="height:50px; width:500px" id="todo" placeholder="Enter your todo items here." id="searchClear" onclick="clear()">
+                                 </h3>
+                             </div>
+                        </div>
+
+                    </div><br>
+
+                    <div class="row btn-group btn-group-lg btn-group-justified" style="margin-left:0px;">
+                        <div class="col-md-6">
+                        <button id="addTodoList" class="btn-block btn-default btn-lg" value="" onclick="addTodo()">Add todo</button>
+                        </div>
+                        <div class="col-md-6">
+                        <button id="addTodoList" class="btn-block btn-default btn-lg" value="" onclick="listTodo()">List todo</button>
+                        </div>
+                    </div>
+
+                    <div class="todolist-footer">
+                        <strong><span class="count-todos" style="text-align:center"><h4>Todo Entered</h4></span></strong>
+                    </div>
+
+                    <div class="todo-header">
+                        
+
+                        <ul class="list-unstyled" id="sortable">
+
+
+                        </ul>
+                        <span class="count-todos" id=" count-todos"><span id="leftItem" style="color: red;"></span></span>
+                    </div>
+                    <div class="col-md-12">
+                            <button id="addTodoList" class="btn-block btn-primary btn-lg" value="" onclick="moveTodo()">Move to already done</button>
+                    </div>
+                </div><hr>
+        </div>
+
+        <div class="col-md-6" style="height: 100%">
+            <div class="todolist" >
+                <h1>Already Done</h1>
+
+                <div class="todolist-footer">
+                    <strong><span class="count-todos" style="text-align:center"><h4>Items already done</h4></span></strong>
+                </div>
+                <ul id="done-items" class="list-unstyled">
+
+                </ul>
+
+
+                <div class="col-md-12">
+                    <button id="addTodoList" class="btn-block btn-danger btn-lg" value="" onclick="todoDone()">Todo Done</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>
