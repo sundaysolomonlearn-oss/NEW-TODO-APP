@@ -196,3 +196,4 @@
               alert(" You can now enter a todo task if you do not want to quit, or you may click the 'Todo Done' botton to quit.");
           }
       }
+ // still trying on tailwind css to make it more responsive and attractive, but I am still learning it, so I will keep trying.
